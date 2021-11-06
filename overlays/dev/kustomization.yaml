@@ -1,14 +1,8 @@
+
+   
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
-metadata:
-  name: arbitrary
-
-# 모든 Resource에 Label을 추가한다.
-commonLabels:
-  app: mnist
-
-resources:
-- training-job.yaml
-images:
-- name: ghcr.io/kimjunil/mnist_classifier
-  newTag: 0.1.0
+bases:
+  - ../../base
+patchesStrategicMerge:
+  - training-job-patch.yaml

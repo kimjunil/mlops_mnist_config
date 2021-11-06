@@ -11,4 +11,4 @@ resources:
 - training-job.yaml
 images:
 - name: ghcr.io/kimjunil/mnist_classifier
-  newTag: 0.1.0
+  newTag: 0.0.1
