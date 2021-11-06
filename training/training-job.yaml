@@ -4,10 +4,12 @@ metadata:
   name: mnist-train-job
 spec:
   schedule: "*/1 * * * *"
-  template:
+  jobTemplate:
     spec:
-      containers:
-      - name: mnist-classifier
-        image: ghcr.io/kimjunil/mnist_classifier:0.0.1
-        args: ["--epochs", "1"]
-      restartPolicy: Never
+      template:
+        spec:
+          containers:
+          - name: mnist-classifier
+            image: ghcr.io/kimjunil/mnist_classifier:0.0.1
+            args: ["--epochs", "1"]
+          restartPolicy: Never
