@@ -1,5 +1,3 @@
-
-   
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 patchesStrategicMerge:
@@ -7,7 +5,5 @@ patchesStrategicMerge:
 resources:
 - ../../base
 images:
-- name: kimjunil/mnist_classifier
-  newTag: 0.0.22
-- name: mnist_classifier
+- name: mnist-classifier
   newTag: 0.0.24
