@@ -7,3 +7,5 @@ resources:
 images:
 - name: ghcr.io/kimjunil/mnist_classifier
   newTag: 0.0.24
+- name: mnist_classifier
+  newTag: 0.0.25
