@@ -9,3 +9,5 @@ resources:
 images:
 - name: kimjunil/mnist_classifier
   newTag: 0.0.22
+- name: mnist_classifier
+  newTag: 0.0.24
