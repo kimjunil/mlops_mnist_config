@@ -6,6 +6,6 @@ resources:
 - ../../base
 images:
 - name: ghcr.io/kimjunil/mnist_classifier
-  newTag: 0.0.30
+  newTag: 0.0.31
 - name: mnist_classifier
   newTag: 0.0.25
