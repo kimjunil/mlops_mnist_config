@@ -3,7 +3,7 @@ kind: CronJob
 metadata:
   name: mnist-train-job
 spec:
-  schedule: "0 * * * *"
+  schedule: "*/1 * * * *"
   jobTemplate:
     spec:
       ttlSecondsAfterFinished: 600
