@@ -9,4 +9,3 @@ commonLabels:
 
 resources:
 - training-job.yaml
-# - mnist-api-service.yaml
