@@ -9,6 +9,6 @@ spec:
   selector:  
     app: mnist-classifier
   ports:
-  - port: 5000  
-    targetPort: 80  
+  - port: 80  
+    targetPort: 5000  
     protocol: TCP
