@@ -5,7 +5,7 @@ metadata:
   labels:  
     app: mnist-classifier
 spec:
-  type: LoadBalance
+  type: LoadBalancer
   selector:  
     app: mnist-classifier
   ports:
