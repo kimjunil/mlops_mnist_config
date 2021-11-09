@@ -13,4 +13,11 @@ spec:
           - name: mnist-classifier
             image: ghcr.io/kimjunil/mnist_classifier:0.0.1
             args: ["--epochs", "1"]
+            env:
+            - name: WEB_HOOK_URL
+              valueFrom:
+                secretKeyRef:
+                name: slackbot
+                key: web_hook_url
+
           restartPolicy: Never
