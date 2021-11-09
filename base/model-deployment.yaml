@@ -1,9 +1,9 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
+  name: mnist-classifier-deployment
   labels:
     app: mnist-classifier
-  name: mnist-classifier
 spec:
   selector:
     matchLabels:

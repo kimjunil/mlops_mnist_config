@@ -9,4 +9,5 @@ commonLabels:
 
 resources:
 - training-job.yaml
-- model-service.yaml
+- model-deployment.yaml
+- model-loadbalancer.yaml
