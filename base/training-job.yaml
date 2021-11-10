@@ -1,23 +1,20 @@
 apiVersion: batch/v1
-kind: CronJob
+kind: Job
 metadata:
   name: mnist-train-job
 spec:
-  schedule: "*/10 * * * *"
-  jobTemplate:
+  ttlSecondsAfterFinished: 600
+  template:
     spec:
-      ttlSecondsAfterFinished: 600
-      template:
-        spec:
-          containers:
-          - name: mnist-classifier
-            image: ghcr.io/kimjunil/mnist_classifier:0.0.1
-            args: ["--epochs", "1"]
-            env:
-            - name: WEB_HOOK_URL
-              valueFrom:
-                secretKeyRef:
-                  name: slackbot
-                  key: web_hook_url
+      containers:
+      - name: mnist-classifier
+        image: ghcr.io/kimjunil/mnist_classifier:0.0.1
+        args: ["--epochs", "1"]
+        env:
+        - name: WEB_HOOK_URL
+          valueFrom:
+            secretKeyRef:
+              name: slackbot
+              key: web_hook_url
 
-          restartPolicy: Never
+      restartPolicy: Never

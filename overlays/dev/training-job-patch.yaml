@@ -1,4 +1,4 @@
 apiVersion: batch/v1
-kind: CronJob
+kind: Job
 metadata:
   name: mnist-train-job
