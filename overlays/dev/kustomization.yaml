@@ -6,6 +6,6 @@ resources:
 - ../../base
 images:
 - name: ghcr.io/kimjunil/mnist_classifier
-  newTag: 0.1.0
+  newTag: 0.1.1
 - name: ghcr.io/kimjunil/mnist_classifier_bento
   newTag: 0.1.0
