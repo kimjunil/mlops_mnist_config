@@ -8,4 +8,4 @@ images:
 - name: ghcr.io/kimjunil/mnist_classifier
   newTag: 0.3.0
 - name: ghcr.io/kimjunil/mnist_classifier_bento
-  newTag: 0.1.2
+  newTag: 0.3.0
